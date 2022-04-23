@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #a7edfa; 
+    background: linear-gradient(to bottom, #ffea00 0%, #ffc400 25%, #fe8300 75%, #ff0d00 100%);
+    overflow: auto;
+    background-repeat: no-repeat;
+}
+
+header{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+h1 {
+    text-align: center;
+    padding: 3rem;
+    margin: 0 auto 2rem;
+}
+
+h1::after {
+    content: '';
+    animation: animate 1s ease-in forwards;
+}
+
+@keyframes animate {
+    0%{
+        content: "Bruce's Puce";
+    }
+    10%{
+        content: "Gin Lemon";
+    }
+    20%{
+        content: "Berry Deadly";
+    }
+    30%{
+        content: "Grasshoper";
+    }
+    40%{
+        content: "Zenmaister";
+    }
+    50%{
+        content: "Bubble Gum";
+    }
+    60%{
+        content: "Horse's Neck";
+    }
+    70%{
+        content: "Sherry Eggnog";
+    }
+    80%{
+        content: "Duchamp's Punch";
+    }
+    90%{
+        content: "Zambeer";
+    }
+    100%{
+        content: "Tequila Sunrise";
+    }
+}
+
+#filter-container {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.filter{
+    margin: 0.25rem;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+option {
+    padding: 0.5rem;
+    color: white;
+    background: goldenrod;
+}
+
+.filter:focus, option:hover {
+    background-color: red;
+}
+
+button {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 10px;
+    margin: 3vh auto auto;
+    background: linear-gradient(to bottom, #fe8300 40%, #000000 95%);
+}
+
+.wrapper {
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) auto;
+    grid-template-rows: 3rem auto auto;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: 
+        "img title"
+        "img ing"
+        "info ing";
+    border: 2px solid aquamarine;
+    width: fit-content;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 9px;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.image-grid {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.info {
+    grid-area: info;
+}
+
+.drink-name {
+    grid-area: title;
+}
+
+.drink-instructions {
+    grid-area: ing;
+}
+
+#instructions {
+    max-width: 40vh;
+}
+
+@media (max-width: 400px) {
+    * {
+        font-size: 10px;
+    }
+}
