@@ -14,7 +14,16 @@ export default function DrinkFilter(){
             case 'ingredient':
                 fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
                 .then(res => res.json())
-                .then(data => setIngredientArr(data.drinks.map( (item, i) => (
+                .then(srt => srt.drinks.sort((a, b) => {
+                    if (a.strIngredient1 < b.strIngredient1) {
+                        return -1;
+                    } else if (b.strIngredient1 < a.strIngredient1) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                }))
+                .then(data => setIngredientArr(data.map( (item, i) => (
                 <option value={item.strIngredient1.toLowerCase().replaceAll(' ', '-')} key={i}>{item.strIngredient1}</option>))));
                 break;
             case 'random':
