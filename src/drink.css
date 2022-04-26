@@ -28,42 +28,44 @@ h1 {
 
 h1::after {
     content: '';
-    animation: animate 1s ease-in forwards;
+    position: relative;
+    animation: animate 2s ease-in forwards;
+    left: 0.1ch;
 }
 
 @keyframes animate {
     0%{
-        content: "Bruce's Puce";
+        content: " Bruce's Puce";
     }
     10%{
-        content: "Gin Lemon";
+        content: " Gin Lemon";
     }
     20%{
-        content: "Berry Deadly";
+        content: " Berry Deadly";
     }
     30%{
-        content: "Grasshoper";
+        content: " Grasshoper";
     }
     40%{
-        content: "Zenmaister";
+        content: " Zenmaister";
     }
     50%{
-        content: "Bubble Gum";
+        content: " Bubble Gum";
     }
     60%{
-        content: "Horse's Neck";
+        content: " Horse's Neck";
     }
     70%{
-        content: "Sherry Eggnog";
+        content: " Sherry Eggnog";
     }
     80%{
-        content: "Duchamp's Punch";
+        content: " Duchamp's Punch";
     }
     90%{
-        content: "Zambeer";
+        content: " Zambeer";
     }
     100%{
-        content: "Tequila Sunrise";
+        content: " Tequila Sunrise";
     }
 }
 
