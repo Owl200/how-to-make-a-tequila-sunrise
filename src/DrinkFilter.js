@@ -41,7 +41,7 @@ export default function DrinkFilter(){
 
     // sends request to get drink name after selecting ingredient on second drop-down
     useEffect( _ => {
-        firstDdValue === 'ingredient' && fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientDd}`)
+        firstDdValue === 'ingredient' && fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientDd.replaceAll('-', ' ')}`)
         .then(res => res.json())
         .then(data => setDrinkName(data.drinks[0].strDrink))
         .catch(e => console.log(e))
