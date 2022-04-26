@@ -10,3 +10,4 @@ App still in development.
 ### Future features to implement
 - Fix the ingredient search option to get a result to show for ingredients with more than one word on the name.
 - Show more than one drink result when searching by ingredient.
+- Add local storage to save favorite drinks with a button.
