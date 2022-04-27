@@ -32,43 +32,65 @@ h1 {
 h1::after {
     content: '';
     position: relative;
-    animation: animate 2s ease-in forwards;
+    animation: animate 1s ease-in forwards;
     left: 0.1ch;
 }
 
 @keyframes animate {
     0%{
-        content: " Bruce's Puce";
+        white-space: pre;
+        text-decoration: underline;
+        content: "  Bruce's Puce  ";
     }
     10%{
-        content: " Gin Lemon";
+        white-space: pre;
+        text-decoration: underline;
+        content: "    Gin Lemon   ?";
     }
     20%{
-        content: " Berry Deadly";
+        white-space: pre;
+        text-decoration: underline;
+        content: "  Berry Deadly  ?";
     }
     30%{
-        content: " Grasshoper";
+        white-space: pre;
+        text-decoration: underline;
+        content: "   Grasshoper   ?";
     }
     40%{
-        content: " Zenmaister";
+        white-space: pre;
+        text-decoration: underline;
+        content: "   Zenmaister   ?";
     }
     50%{
-        content: " Bubble Gum";
+        white-space: pre;
+        text-decoration: underline;
+        content: "   Bubble Gum   ?";
     }
     60%{
-        content: " Horse's Neck";
+        white-space: pre;
+        text-decoration: underline;
+        content: "  Horse's Neck  ?";
     }
     70%{
-        content: " Sherry Eggnog";
+        white-space: pre;
+        text-decoration: underline;
+        content: "  Sherry Eggnog ?";
     }
     80%{
-        content: " Duchamp's Punch";
+        white-space: pre;
+        text-decoration: underline;
+        content: " Duchamp's Punch?";
     }
     90%{
-        content: " Zambeer";
+        white-space: pre;
+        text-decoration: underline;
+        content: "     Zambeer    ?";
     }
     100%{
-        content: " Tequila Sunrise";
+        white-space: pre;
+        text-decoration: underline;
+        content: " Tequila Sunrise?";
     }
 }
 
