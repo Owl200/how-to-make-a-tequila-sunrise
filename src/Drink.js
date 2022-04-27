@@ -10,12 +10,22 @@ export default function Drink(props){
     // used to populate the ingredient list on the drink card
     const ingredients = _ => {
         const ing = [];
+        let j = 0;
         for (let i in props.drink){
             if (i.includes('strIngredient') && props.drink[i] ) { //searches for a strIngredient property and checks that the property is not null 
-                ing.push({[i.slice(0, -1)]: props.drink[i]})
+                ing.length < 9 ?
+                ing.push({[i.slice(0, -1)]: props.drink[i]}) :
+                ing.push({[i.slice(0, -2)]: props.drink[i]})
             } else if (i.includes('strMeasure') && props.drink[i]) {
-                ing[i[i.length - 1] - 1] = {...ing[i[i.length  - 1] - 1], [i.slice(0, -1)]: props.drink[i]}
+                if (j < 9) {
+                    ing[j] = {...ing[j], [i.slice(0, -1)]: props.drink[i]}
+                    j++;
+                } else if (j >= 9) {
+                    ing[j] = {...ing[j], [i.slice(0, -2)]: props.drink[i]}
+                    j++
+                }
             }
+            console.log(ing)
         }
         return ing.map( (item, i) => <li key={i}>{item[`strMeasure`]} {item[`strIngredient`]}</li>);
     }

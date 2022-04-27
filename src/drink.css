@@ -2,11 +2,14 @@
     box-sizing: border-box;
 }
 
+html {
+    background: #a7edfa; 
+    background: #ff0d00;
+}
+
 body {
-    height: 100vh;
     background: #a7edfa; 
     background: linear-gradient(to bottom, #ffea00 0%, #ffc400 25%, #fe8300 75%, #ff0d00 100%);
-    overflow: auto;
     background-repeat: no-repeat;
 }
 
@@ -110,8 +113,6 @@ button {
 }
 
 .wrapper {
-    position: relative;
-    top: 30px;
     display: grid;
     grid-template-columns: minmax(100px, 200px) auto;
     grid-template-rows: 3rem auto auto;
@@ -125,7 +126,7 @@ button {
     border: 2px solid aquamarine;
     width: fit-content;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 2rem;
     border-radius: 9px;
     background: rgba(0, 0, 0, 0.45);
