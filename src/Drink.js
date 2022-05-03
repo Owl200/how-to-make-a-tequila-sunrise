@@ -25,7 +25,6 @@ export default function Drink(props){
                     j++
                 }
             }
-            console.log(ing)
         }
         return ing.map( (item, i) => <li key={i}>{item[`strMeasure`]} {item[`strIngredient`]}</li>);
     }

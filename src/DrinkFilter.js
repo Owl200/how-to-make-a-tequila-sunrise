@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import Drink from './Drink.js'
+import MiniDrink from './MiniDrink.js'
 
 export default function DrinkFilter(){
     const [firstDdValue, setFirstDdValue] = useState('random') // will decide the case for the first drop-down
@@ -7,6 +8,8 @@ export default function DrinkFilter(){
     const [ingredientDd, setIngredientDd] = useState('')  // value gotten from the second drop-down
     const [drink, setDrink] = useState({}) // object including all the info for a drink
     const [drinkName, setDrinkName] = useState('Tequila sunrise') // value used to search for a drink by name
+    const [drinkMini, setDrinkMini] = useState([{strDrink: 'Tequila SunRise', strDrinkThumb: 'https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg'}])
+    const [indexStart, setIndexStart] =useState(0) // sets the index where the drinkMiniArr will start at
 
     // used for the first drop-down
     useEffect( _ =>  {
@@ -41,6 +44,7 @@ export default function DrinkFilter(){
         .catch(err => console.log(err))
     }, [drinkName, firstDdValue] )
 
+    // To run when the page first loads 
     useEffect( _ => {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`)
         .then(res => res.json())
@@ -54,7 +58,7 @@ export default function DrinkFilter(){
         `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientDd.replaceAll(' ', '-')}` :
         `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientDd.replaceAll('-', ' ')}`)
         .then(res => res.json())
-        .then(data => setDrinkName(data.drinks[0].strDrink))
+        .then(data => setDrinkMini(data.drinks))
         .catch(e => console.log(e))
     }, [ingredientDd, firstDdValue])
 
@@ -90,6 +94,11 @@ export default function DrinkFilter(){
         setDrinkName(e.target.value);
     }
 
+    let drinkMiniArr;
+    ingredientDd && (drinkMiniArr = drinkMini.map( (element, i) => <MiniDrink drink={element} drinkId={i}/>))
+    
+
+    console.log(drinkMini)
     return(
         <>
             <header>
@@ -116,7 +125,8 @@ export default function DrinkFilter(){
                 </>}
             </div>
 
-            <Drink drink={drink}/>
+            {firstDdValue === 'ingredient' || <Drink drink={drink}/>}
+            {firstDdValue === 'ingredient' && drinkMiniArr}
         </>
     )
 }

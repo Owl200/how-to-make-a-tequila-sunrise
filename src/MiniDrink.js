@@ -1,27 +1,22 @@
 import React from 'react'
-import './drink.css'
+import './mini-drink.css'
 
 export default function MiniDrink(props){
     
+    //console.log(props)
+    const handleClick = e => console.log(e.target) 
+    
+
     return(
         <div className='main'>
-            <div className='wrapper'>
-                <div className='image-grid'>
+            <div onClick={handleClick} className='wrapper-mini' key={props.drinkId}>
+                <div className='image-grid-mini'>
                     <div className='image'>
-                        <img src={props.drink.strDrinkThumb} alt="" />
+                        <img  src={props.drink.strDrinkThumb} alt="" />
                     </div>
                 </div>
-                <div className='info'>
-                    <p>({props.drink.strAlcoholic})</p>
-                </div>
-                <div className='drink-name'>
+                <div className='drink-name-mini'>
                     <h2>{props.drink.strDrink}</h2>
-                </div>
-                <div className='drink-instructions'>
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        {ingredients()}
-                    </ul>
                 </div>
             </div>
         </div>
