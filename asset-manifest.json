@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/how-to-make-a-tequila-sunrise/static/css/main.8058209b.css",
-    "main.js": "/how-to-make-a-tequila-sunrise/static/js/main.bc52395c.js",
+    "main.css": "/how-to-make-a-tequila-sunrise/static/css/main.82e7ac95.css",
+    "main.js": "/how-to-make-a-tequila-sunrise/static/js/main.f2ada8e9.js",
     "static/js/787.5aa31c15.chunk.js": "/how-to-make-a-tequila-sunrise/static/js/787.5aa31c15.chunk.js",
     "index.html": "/how-to-make-a-tequila-sunrise/index.html",
-    "main.8058209b.css.map": "/how-to-make-a-tequila-sunrise/static/css/main.8058209b.css.map",
-    "main.bc52395c.js.map": "/how-to-make-a-tequila-sunrise/static/js/main.bc52395c.js.map",
+    "main.82e7ac95.css.map": "/how-to-make-a-tequila-sunrise/static/css/main.82e7ac95.css.map",
+    "main.f2ada8e9.js.map": "/how-to-make-a-tequila-sunrise/static/js/main.f2ada8e9.js.map",
     "787.5aa31c15.chunk.js.map": "/how-to-make-a-tequila-sunrise/static/js/787.5aa31c15.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8058209b.css",
-    "static/js/main.bc52395c.js"
+    "static/css/main.82e7ac95.css",
+    "static/js/main.f2ada8e9.js"
   ]
 }
