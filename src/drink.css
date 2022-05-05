@@ -136,7 +136,7 @@ button {
 
 .wrapper {
     display: grid;
-    grid-template-columns: minmax(100px, 200px) auto;
+    grid-template-columns: minmax(100px, 200px) 30vw;
     grid-template-rows: 3rem auto auto;
     column-gap: 2rem;
     align-items: center;
@@ -192,6 +192,12 @@ img {
 
 #instructions {
     max-width: 40vh;
+}
+
+.drink-arr-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 400px) {
