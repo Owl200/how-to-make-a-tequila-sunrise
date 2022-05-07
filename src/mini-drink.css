@@ -42,8 +42,13 @@ img {
     grid-area: title;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .wrapper-mini {
         width: 90%;
+        grid-template-rows: 8ch;
     }
+    html{
+        font-size: 12px;
+    }
+
 }

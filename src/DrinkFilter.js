@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import Drink from './Drink.js'
 import MiniDrink from './MiniDrink.js'
+import vivid from './vivid.png'
 
 export default function DrinkFilter(){
     const [firstDdValue, setFirstDdValue] = useState('random') // will decide the case for the first drop-down
@@ -80,7 +81,7 @@ export default function DrinkFilter(){
             setDrinkMiniArr([])
             setDrinkArrButtons([])
             for(let i = 0; i < Math.ceil(drinkMini.length/10); i++){
-                setDrinkArrButtons(prev => [...prev, <button onClick={arrayButton}>{i + 1}</button>])
+                setDrinkArrButtons(prev => [...prev, <button onClick={arrayButton} className='array-button'>{i + 1}</button>])
             }
             if(drinkMini.slice(indexStart).length < 10) {
                 setDrinkMiniArr(drinkMini.slice(indexStart).map( (element, i) => {
@@ -138,7 +139,7 @@ export default function DrinkFilter(){
     return(
         <>
             <header>
-                <h1>How to Make a</h1>
+                <img id='header-logo' src={vivid} alt='Vivid Las Vegas'/>
             </header>
             <div id='filter-container'>
                 <label htmlFor='search'>Search for a drink by: </label>

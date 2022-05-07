@@ -23,6 +23,13 @@ header{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+#header-logo {
+    height: 20vh;
+    width: 100%;
+    object-fit:none ;
+    border-radius: 0;
+}
+
 h1 {
     text-align: center;
     padding: 3rem;
@@ -131,7 +138,7 @@ button {
     color: white;
     border-radius: 10px;
     margin: 3vh auto auto;
-    background: linear-gradient(to bottom, #fe8300 40%, #000000 95%);
+    background: linear-gradient(to bottom, #41403f86 40%, #00000086 95%);
 }
 
 .wrapper {
@@ -198,10 +205,26 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 400px) {
+.array-button {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+@media (max-width: 700px) {
     * {
         font-size: 10px;
     }
+    #header-logo {
+        height: 100%;
+        object-fit:scale-down ;
+        padding: 0.5rem;
+    }
+    header {
+        height: 10vh;
+    }
+
 }
