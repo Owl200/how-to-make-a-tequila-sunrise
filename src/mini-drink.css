@@ -17,7 +17,7 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    z-index: 1000;
+    cursor: pointer;
 }
 
 
@@ -41,10 +41,6 @@ img {
 .drink-name-mini {
     text-align: center;
     grid-area: title;
-}
-
-.drink-name-mini h2 {
-    cursor: pointer;
 }
 
 @media (max-width: 700px) {
