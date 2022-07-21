@@ -40,13 +40,6 @@ export default function DrinkFilter(){
         .catch(err => console.log(err))
     }, [drinkName] )
 
-    // To run when the page first loads 
-    useEffect( _ => {
-        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`)
-        .then(res => res.json())
-        .then(data => setDrink(data.drinks[0])) 
-        .catch(err => console.log(err))
-    }, [] )
 
     // sends request to get drink name after selecting ingredient on second drop-down
     useEffect( _ => {
@@ -103,7 +96,6 @@ export default function DrinkFilter(){
         }
     }, [drinkMini, indexStart, drinkName, drink])
 
-    console.log(drinkName)
 
     //event handler for the buttons that appear on the drinks list 
     const arrayButton = e => setIndexStart((+e.target.innerHTML - 1) * 10)

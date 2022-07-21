@@ -2,10 +2,6 @@ import React from 'react'
 import './drink.css'
 
 export default function Drink(props){
-    
-    
-    /*const [drink] = useState(props.drink)  // displays the info for a single drink
-    console.log(drink) */
 
     // used to populate the ingredient list on the drink card
     const ingredients = _ => {
